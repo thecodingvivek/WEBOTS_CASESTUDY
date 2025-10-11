@@ -5,20 +5,21 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/project
 EXTERNPROTO "../protos/E-puck.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/Parquetry.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/buildings/protos/RandomBuilding.proto"
 
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.5027709113669303 -0.061351863340978134 -0.8622397343824143 3.351249474013847
-  position 0.9577907064701232 -0.22956727015869394 2.1506440318246205
+  orientation 0.6003882337221007 -0.10162524729932562 -0.7932252378230329 3.4085234840277643
+  position 0.29635801839093223 -0.1743451454403796 1.7225214872791499
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 Solid {
-  translation 0.00015432635320898917 -0.04965166875828224 0.04960630303681247
-  rotation 0.9999270888853659 -0.003252843824241268 0.011629097999971067 0.009987202223502014
+  translation 0.10029072905781049 -0.04908100070342213 0.04968752580390425
+  rotation -0.7223361053487188 -0.4335907167043593 0.538729655112325 0.00021529451017034216
   children [
     Shape {
       appearance Appearance {
@@ -26,22 +27,22 @@ Solid {
         }
       }
       geometry Box {
-        size 1 0.01 0.1
+        size 0.8 0.01 0.1
       }
     }
   ]
   name "wallOne"
   boundingObject Box {
-    size 1 0.01 0.1
+    size 0.8 0.01 0.1
   }
   physics Physics {
   }
-  linearVelocity -9.46768876171688e-06 5.615887399840205e-08 -7.26605020417986e-08
-  angularVelocity -1.4579684036430065e-06 2.0280259848500934e-06 -5.100649547549366e-08
+  linearVelocity -1.787986263224184e-05 1.6109518190202655e-10 1.0531078856956805e-06
+  angularVelocity -2.47021301575964e-08 2.9318228681184126e-06 2.2714424105213603e-09
 }
 Solid {
-  translation -0.00020045089286714946 0.05082306303192526 0.04959882349043941
-  rotation 0.9999274621843773 0.0020448415508379143 -0.011869666909502304 0.017631905228046255
+  translation -0.319671 -0.280047 0.0497065
+  rotation -0.0001244249989767539 3.1080799744397775e-05 0.9999999917762018 1.57091
   children [
     Shape {
       appearance Appearance {
@@ -49,26 +50,68 @@ Solid {
         }
       }
       geometry Box {
-        size 1 0.01 0.1
+        size 0.45 0.01 0.1
+      }
+    }
+  ]
+  name "wallThreeSolid"
+  boundingObject Box {
+    size 0.45 0.01 0.1
+  }
+  physics Physics {
+  }
+}
+Solid {
+  translation -0.319736 0.289953 0.0496179
+  rotation -0.0001244249989767539 3.1080799744397775e-05 0.9999999917762018 1.57091
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+      }
+      geometry Box {
+        size 0.45 0.01 0.1
+      }
+    }
+  ]
+  name "wallThreeSolid(1)"
+  boundingObject Box {
+    size 0.45 0.01 0.1
+  }
+  physics Physics {
+  }
+}
+Solid {
+  translation 0.10028085863529008 0.0609189978226478 0.04968465551496162
+  rotation -0.7365023259319774 -0.39452332927258643 0.549468530997419 0.00021109137350897695
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+      }
+      geometry Box {
+        size 0.8 0.01 0.1
       }
     }
   ]
   name "wallTwo"
   boundingObject Box {
-    size 1 0.01 0.1
+    size 0.8 0.01 0.1
   }
   physics Physics {
   }
-  linearVelocity 1.2317005101245099e-05 5.0843611980089e-05 9.000651663200191e-07
-  angularVelocity -0.0010189581991978337 -2.235947811510197e-06 2.71168566047448e-07
+  linearVelocity -1.7276176161038487e-05 -1.105929102774043e-09 1.1909741454019282e-06
+  angularVelocity 1.4187329649271208e-08 2.765921552860191e-06 3.762359045105617e-09
 }
 E-puck {
-  hidden position_0_0 561.10743405623
-  hidden position_0_1 561.1074340875741
-  hidden rotation_1 0 -1 0 4.379243589932806
-  hidden rotation_2 0 -1 0 4.379243558588663
-  translation 0.225963 -0.000871684 0.000554264
-  rotation -0.0004755534742132123 -1.5796570768583566e-09 0.9999998869244402 -3.1415876549567443
+  hidden position_0_0 636.8743348550172
+  hidden position_0_1 636.8743348863628
+  hidden rotation_1 0 -1 0 4.010566477300625
+  hidden rotation_2 0 -0.9999999999999999 0 4.0105664459550034
+  translation 0.445315 -0.00087059 -0.00123462
+  rotation 0.0006727821368443306 8.945716193189235e-10 0.9999997736820727 -3.141587653848721
   controller "my_controller"
   camera_width 28
   camera_height 28
@@ -100,4 +143,6 @@ Solid {
 RectangleArena {
   floorAppearance Parquetry {
   }
+}
+RandomBuilding {
 }
