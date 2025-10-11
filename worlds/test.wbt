@@ -1,0 +1,108 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "../protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.7192431896638647 -0.019011200471415322 -0.6944982421711272 3.17829887168993
+  position -0.15152861058389244 -0.07013474950628784 2.1336237454158233
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Solid {
+  translation 0.0001640001927047906 -0.04965172355815447 0.049606377313900184
+  rotation 0.999926342868922 -0.0034598170833733464 0.011633507748428275 0.009988630060140781
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+      }
+      geometry Box {
+        size 1 0.01 0.1
+      }
+    }
+  ]
+  name "solid(1)"
+  boundingObject Box {
+    size 1 0.01 0.1
+  }
+  physics Physics {
+  }
+  linearVelocity -1.0061171787242523e-05 5.424266339254527e-08 -7.728691656438909e-08
+  angularVelocity -1.4051872935249523e-06 2.1552069692231334e-06 -5.061477989903765e-08
+}
+Solid {
+  translation -0.0002130360328860735 0.050774326624599825 0.049597937617359075
+  rotation 0.9999344521705454 0.002066366235646157 -0.01126150491590898 0.018608672630485778
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+      }
+      geometry Box {
+        size 1 0.01 0.1
+      }
+    }
+  ]
+  name "solid(2)"
+  boundingObject Box {
+    size 1 0.01 0.1
+  }
+  physics Physics {
+  }
+  linearVelocity 1.3088601682476036e-05 4.582914956375475e-05 8.555171376087857e-07
+  angularVelocity -0.0009186558358422496 -2.4117660316668005e-06 2.732156799888398e-07
+}
+E-puck {
+  hidden position_0_0 527.5741995429801
+  hidden position_0_1 527.5741995743326
+  hidden linearVelocity_0 -0.03983987373426028 -1.992968491553724e-07 -2.8028666937028876e-08
+  hidden angularVelocity_0 -5.427635663740132e-08 0.010675082357128413 -7.701349251833549e-09
+  hidden rotation_1 0 -1 0 0.21336626010519522
+  hidden linearVelocity_1 -0.03978649871439549 -1.9902722083737876e-07 -2.7876883023110317e-10
+  hidden angularVelocity_1 9.933457388391506e-06 -1.9893249176327494 5.268499115950797e-08
+  hidden rotation_2 0 -1 0 0.2133662287526391
+  hidden linearVelocity_2 -0.039786498417154655 -1.9902154618179833e-07 -3.2392168946927325e-10
+  hidden angularVelocity_2 9.968980995812171e-06 -1.989324917620692 -5.818928274132992e-08
+  translation 0.24686152930021676 -0.0008715814295034395 -6.396205524563693e-05
+  rotation -0.00012771688168245027 9.327314889459233e-10 0.9999999918441992 -3.1415876509600267
+  controller "my_controller"
+  camera_width 28
+  camera_height 28
+}
+Shape {
+}
+Solid {
+  translation -0.488899 -1.65301e-13 0.028
+  rotation -3.3133434805225664e-12 3.440896051580382e-11 0.9999999999999999 2.378980394450352e-05
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../case_images/zero.png"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.005 0.028 0.028
+      }
+    }
+  ]
+  name "IMAGE_HOLDER"
+  boundingObject Box {
+    size 0.005 0.026 0.026
+  }
+}
+RectangleArena {
+}
