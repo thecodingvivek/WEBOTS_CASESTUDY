@@ -6,6 +6,8 @@ import os
 import json
 from keras.src.datasets import mnist
 
+TIME_STEP = 65
+
 print("Please wait e-puck bot load weights and biases")
 
 (train_x, train_y), (testd_x, testd_y) = mnist.load_data()
@@ -161,6 +163,29 @@ rightSpeed = 2.0
 WALL_THRESHOLD = 80
 image_counter = 0
 detected = 0
+
+def rotateRight():
+    print("started")
+    duration = 3.141# seconds (tuned for 90°)
+    steps = int(duration * 1000 / TIME_STEP)
+    leftWheel.setVelocity(0.5)
+    rightWheel.setVelocity(-0.5)
+
+    for _ in range(steps):
+        robot.step(TIME_STEP)
+
+def rotateLeft():
+    print("started")
+    duration = 3.141# seconds (tuned for 90°)
+    steps = int(duration * 1000 / TIME_STEP)
+    leftWheel.setVelocity(-0.5)
+    rightWheel.setVelocity(0.5)
+
+    for _ in range(steps):
+        robot.step(TIME_STEP)
+
+
+
 while robot.step(timestep) != -1:
     ir_values = [sensor.getValue() for sensor in ir_sensors]
     front_center = ir_values[0]
@@ -186,10 +211,15 @@ while robot.step(timestep) != -1:
                                for r,g,b in zip(flat_pixels[0::3],
                                                 flat_pixels[1::3],
                                                 flat_pixels[2::3])]
+                pred = net.get_number(gray_pixels)
 
-                print(f"robot detected {net.get_number(gray_pixels)}")
-                detected = 1
-
+                print(f"robot detected {pred}")
+                if pred % 2 == 0:
+                    rotate180()
+                    leftSpeed = rightSpeed = 2.0
+                else:
+                    detected = 1
+                    
             image_counter += 1
       
 
