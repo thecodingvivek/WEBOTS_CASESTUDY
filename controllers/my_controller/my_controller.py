@@ -215,7 +215,7 @@ while robot.step(timestep) != -1:
 
                 print(f"robot detected {pred}")
                 if pred % 2 == 0:
-                    rotate180()
+                    rotateRight()
                     leftSpeed = rightSpeed = 2.0
                 else:
                     detected = 1
